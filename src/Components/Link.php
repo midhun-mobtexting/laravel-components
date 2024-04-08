@@ -14,6 +14,7 @@ class Link extends Component
 
     protected array $allowedAction = [
         'show' => 'read-only',
+        'view' => 'read-only',
         'create' => 'create-only',
         'update' => 'update-only',
         'import' => 'update-only',
@@ -37,7 +38,7 @@ class Link extends Component
     private function validateActions(): void
     {
         if (!empty($this->action) && !isset($this->allowedAction[$this->action])) {
-            throw new InvalidArgumentException("Invalid status: $this->action. Link action must be one of: ".implode(', ', array_keys($this->allowedAction)));
+            throw new InvalidArgumentException("Invalid action: $this->action. Link action must be one of: ".implode(', ', array_keys($this->allowedAction)));
         }
     }
 
