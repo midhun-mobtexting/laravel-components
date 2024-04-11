@@ -7,7 +7,7 @@
         @if ($isWired()) wire:model{!! $wireModifier() !!}="{{ $name }}"
         @else
         value="{{ $value }}" @endif
-        name="{{ $name }}" @if ($label && !$attributes->get('id')) id="{{ $id() }}" @endif placeholder="{{ $attributes->hasAny(['data-daterange','data-dateranges','data-dateranges-report']) ? 'Select Date Range' : ' Select Date' }}" />
+        name="{{ $name }}" @if ($label && !$attributes->get('id')) id="{{ $id() }}" @endif placeholder="Date Range" />
 
         @if($attributes->has('icon'))
             <span class="input-icon-addon">
