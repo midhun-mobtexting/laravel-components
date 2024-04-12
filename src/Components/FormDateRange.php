@@ -2,7 +2,7 @@
 
 namespace Mobtexting\LaravelComponents\Components;
 
-class FormDate extends Component
+class FormDateRange extends Component
 {
     use HandlesValidationErrors;
     use HandlesDefaultAndOldValue;
@@ -10,8 +10,8 @@ class FormDate extends Component
     public string $name;
     public string $label;
     public string $type;
-    public string $dateType;
     public bool $floating;
+    public string $dateType;
 
     public $value;
 
@@ -24,7 +24,7 @@ class FormDate extends Component
         string $name,
         string $label = '',
         string $type = 'text',
-        string $dateType = 'data-datepicker',
+        string $dateType = 'data-dateranges',
         $bind = null,
         $default = null,
         $language = null,

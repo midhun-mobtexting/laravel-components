@@ -20,6 +20,10 @@ return [
             'view' => 'laravel-components::{framework}.form-date',
             'class' => Components\FormDate::class,
         ],
+        'form-date-range' => [
+            'view' => 'laravel-components::{framework}.form-date-range',
+            'class' => Components\FormDateRange::class,
+        ],
         'form-switch' => [
             'view' => 'laravel-components::{framework}.form-switch',
             'class' => Components\FormSwitch::class,
