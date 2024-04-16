@@ -11,7 +11,7 @@ class FormDateRange extends Component
     public string $label;
     public string $type;
     public bool $floating;
-    public string $dateType;
+    public string $selector;
 
     public $value;
 
@@ -24,7 +24,7 @@ class FormDateRange extends Component
         string $name,
         string $label = '',
         string $type = 'text',
-        string $dateType = 'data-dateranges',
+        string $selector = 'dateranges',
         $bind = null,
         $default = null,
         $language = null,
@@ -34,7 +34,7 @@ class FormDateRange extends Component
         $this->name       = $name;
         $this->label      = $label;
         $this->type       = $type;
-        $this->dateType   = $dateType;
+        $this->selector   = 'data-'.$selector;
         $this->showErrors = $showErrors;
         $this->floating   = $floating && $type !== 'hidden';
 

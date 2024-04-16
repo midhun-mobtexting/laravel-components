@@ -3,7 +3,7 @@
 
     <div class="input-group input-icon">
 
-        <input {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!} type="{{ $type }}" {{ $dateType }} 
+        <input {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : ''), 'placeholder'=> 'Select Date']) !!} type="{{ $type }}" {{ $selector }} 
         @if ($isWired()) wire:model{!! $wireModifier() !!}="{{ $name }}"
         @else
         value="{{ $value }}" @endif

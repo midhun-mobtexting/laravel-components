@@ -10,7 +10,7 @@ class FormDate extends Component
     public string $name;
     public string $label;
     public string $type;
-    public string $dateType;
+    public string $selector;
     public bool $floating;
 
     public $value;
@@ -24,7 +24,7 @@ class FormDate extends Component
         string $name,
         string $label = '',
         string $type = 'text',
-        string $dateType = 'data-datepicker',
+        string $selector = 'datepicker',
         $bind = null,
         $default = null,
         $language = null,
@@ -34,7 +34,7 @@ class FormDate extends Component
         $this->name       = $name;
         $this->label      = $label;
         $this->type       = $type;
-        $this->dateType   = $dateType;
+        $this->selector   = 'data-'.$selector;
         $this->showErrors = $showErrors;
         $this->floating   = $floating && $type !== 'hidden';
 
