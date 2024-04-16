@@ -9,15 +9,9 @@
         value="{{ $value }}" @endif
         name="{{ $name }}" @if ($label && !$attributes->get('id')) id="{{ $id() }}" @endif/>
 
-        @if($attributes->has('icon'))
-            <span class="input-icon-addon">
-                <i class="{{ $attributes->get('icon') }}"></i>
-            </span>
-        @else
-            <span class="input-icon-addon">
-                <i class="ti ti-calendar-month"></i>
-            </span>
-        @endif
+        <span class="input-icon-addon">
+            <i class="{{ $attributes->has('icon') ? $attributes->get('icon') : 'ti ti-calendar-month' }}"></i>
+        </span>
 
         @if ($hasErrorAndShow($name))
         <x-form-errors :name="$name" />
